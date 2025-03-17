@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "pie_fire_dire_grpc/proto"; 
+
+service BeefService {
+  rpc GetBeefSummary (Empty) returns (BeefSummary);
+}
+
+message BeefSummary {
+  map<string, int32> meats = 1;
+}
+
+message Empty {}
